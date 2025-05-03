@@ -5,7 +5,7 @@ require("dotenv").config();
 const compileCode = asyncHandler(async (req, res) => {
   const { code, stdin = "" } = req.body;
   const { language } = req.params; 
-  console.log(language)
+  // console.log(language)
 
   if (!code || !language) {
     throw new ApiError(400, "Code and language are required");
